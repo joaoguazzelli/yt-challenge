@@ -1,6 +1,3 @@
-import pandas
-
-
 def get_fund_name(video_data_list):
     filtered_dict = {
         "Multimercado": [],
