@@ -2,6 +2,7 @@ from video_service.src.youtube_api import *
 while True:
     print("press 1 to start the program or 0 to exit")
     controller = int(input())
+
     if controller == 1:
         playlist_id = get_playlist_id()
         video_ids = get_video_ids(playlist_id)
