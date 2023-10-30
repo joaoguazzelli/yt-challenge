@@ -1,4 +1,5 @@
 from video_service.src.youtube_api import *
+from data_processing_service.src.data_analysis import *
 while True:
     print("press 1 to start the program or 0 to exit")
     controller = int(input())
@@ -10,6 +11,8 @@ while True:
         for video_id in video_ids:
             video_data.append(get_video_data(video_id))
 
-        print(video_data)
+        result = get_fund_name(video_data)
+        result = order_by_publish_date(result)
+        print(result)
     elif controller == 0:
         break

@@ -57,6 +57,7 @@ def get_video_data(video_id):
         return {}
     video_info = video_response["items"][0]
     title = video_info["snippet"]["title"]
+    published_at = video_info["snippet"]["publishedAt"]
     views = video_info["statistics"]["viewCount"]
     likes = video_info["statistics"]["likeCount"]
     comments = video_info["statistics"]["commentCount"]
@@ -65,7 +66,8 @@ def get_video_data(video_id):
         "Title": title,
         "Views": views,
         "Likes": likes,
-        "Comments": comments
+        "Comments": comments,
+        "Published At": published_at
     }
 
 
